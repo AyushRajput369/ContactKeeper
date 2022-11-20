@@ -1,6 +1,10 @@
-const express = require('express')
+const express = require('express');
+const connectDB = require('./config/db');
 
 const app = express();
+
+//connect DataBase
+connectDB();
 
 app.get('/', (req, res) =>
     res.json({ msg: 'welcome to the Contact Keeper API...'})
